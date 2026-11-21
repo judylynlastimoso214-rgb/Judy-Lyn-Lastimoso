@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | JUDy Mobile Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="auth-wrap">
+    <div class="auth-side"><h2>JUDy</h2><p>Mobile Store</p><img src="images/banners/hero.svg" alt="Smartphones"></div>
+    <div class="auth-main"><div class="auth-form">
+      <h1>Create Account</h1><p class="sub">Just pick a username and password.</p>
+      <div id="formError" class="alert error"></div>
+      <form id="registerForm" novalidate>
+        <label>Username<input type="text" id="regUsername" placeholder="Username" autocomplete="username"></label>
+        <label>Password<input type="password" id="regPassword" placeholder="Password" autocomplete="new-password"></label>
+        <label>Confirm Password<input type="password" id="regConfirm" placeholder="Repeat password" autocomplete="new-password"></label>
+        <button class="btn btn-block" type="submit">Register</button>
+      </form>
+      <p class="form-links">Already have an account? <a href="login.html">Login</a></p>
+    </div></div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

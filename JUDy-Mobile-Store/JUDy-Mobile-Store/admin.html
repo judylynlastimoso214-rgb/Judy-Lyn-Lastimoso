@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | JUDy Mobile Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+  <div id="adminGuard" class="container section"></div>
+  <div id="adminApp" class="admin-layout" hidden>
+    <nav class="sidebar"><button data-section="dashboard">📊 Dashboard</button><button data-section="products">📱 Products</button><button data-section="orders">🧾 Orders</button><button data-section="customers">👥 Customers</button><button data-section="inventory">📦 Inventory</button><button data-section="sales">💰 Sales Report</button></nav>
+    <div>
+      <section class="admin-section" id="sec-dashboard"><h2>Dashboard</h2><div class="stat-cards" id="statCards"></div></section>
+      <section class="admin-section" id="sec-products" hidden><h2>Product Management</h2>
+        <div class="toolbar"><input type="search" id="prodSearch" placeholder="Search product..."><button class="btn" onclick="openProductForm(0)">+ Add Product</button></div>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Product</th><th>Brand</th><th>Price</th><th>Discount</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="prodBody"></tbody></table></div></section>
+      <section class="admin-section" id="sec-orders" hidden><h2>Order Management</h2>
+        <div class="toolbar"><input type="search" id="orderSearch" placeholder="Search order number or customer..."></div>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Order #</th><th>Customer</th><th>Date</th><th>Total</th><th>Payment</th><th>Status</th><th>Details</th></tr></thead><tbody id="orderBody"></tbody></table></div></section>
+      <section class="admin-section" id="sec-customers" hidden><h2>Customer Management</h2>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Username</th><th>Full Name</th><th>Registered</th><th>Orders</th><th>Account Status</th><th>Actions</th></tr></thead><tbody id="custBody"></tbody></table></div></section>
+      <section class="admin-section" id="sec-inventory" hidden><h2>Inventory</h2>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Product</th><th>Price</th><th>Stock</th><th>Status</th><th>Update Stock</th></tr></thead><tbody id="invBody"></tbody></table></div></section>
+      <section class="admin-section" id="sec-sales" hidden><h2>Sales Report</h2>
+        <div class="stat-cards" id="salesCards"></div>
+        <div class="chart"><h3>Sales by Brand</h3><div id="salesChart"></div></div></section>
+    </div>
+  </div>
+  <div class="modal" id="modal"><div class="modal-box" id="modalBox"></div></div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

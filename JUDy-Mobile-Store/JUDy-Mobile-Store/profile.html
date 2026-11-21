@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | JUDy Mobile Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main><div class="container"><div class="form-card auth-box">
+    <h1>My Profile</h1><p class="sub">View and update your account information.</p>
+    <div id="formError" class="alert error"></div>
+    <form id="profileForm" novalidate>
+      <label>Username<input type="text" id="profUsername" disabled></label>
+      <label>Full Name<input type="text" id="profName" placeholder="Your full name"></label>
+      <label>Email<input type="email" id="profEmail" placeholder="you@email.com"></label>
+      <label>Contact Number<input type="tel" id="profPhone" placeholder="09123456789"></label>
+      <label>Address<textarea id="profAddress" rows="3" placeholder="House, street, barangay, city, province"></textarea></label>
+      <button type="button" class="btn" id="editBtn">Edit Profile</button>
+      <button type="submit" class="btn" id="saveBtn" hidden>Save Changes</button>
+      <button type="button" class="btn btn-dark" onclick="logout()">Logout</button>
+    </form>
+    <p class="form-links"><a href="orders.html">View my orders &rarr;</a></p>
+  </div></div></main>
+  <div id="site-footer"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
